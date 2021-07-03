@@ -34,7 +34,7 @@ const cadastrarUsuario = async (req, res) => {
             email: email,
             senha: senhaCriptografada,
             nome_loja: nome_loja
-        }).returning('*').first();
+        }).returning('*');
 
         if (!usuario) {
             return res.status(400).json("O usuário não foi cadastrado.");
