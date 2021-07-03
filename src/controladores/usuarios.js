@@ -40,7 +40,7 @@ const cadastrarUsuario = async (req, res) => {
             return res.status(400).json("O usuário não foi cadastrado.");
         }
 
-        const { senhaRes, ...dadosUsuario } = usuario[0];  
+        const { senha: senhaRes, ...dadosUsuario } = usuario[0];  
 
         return res.status(200).json(dadosUsuario);
     } catch (error) {
